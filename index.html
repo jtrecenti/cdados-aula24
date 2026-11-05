@@ -1234,7 +1234,7 @@ Julio Trecenti
 <section class="slide level2 secao">
 <h2>Revisão: a média amostral</h2>
 <div class="miudo">
-<p>O que já sabemos sobre a média amostral, e o que fizemos com isso na aula 22.</p>
+<p>O que já sabemos sobre a média amostral, e o que fizemos com isso no experimento dos resistores.</p>
 </div>
 </section>
 <section class="slide level2">
@@ -1261,16 +1261,16 @@ Julio Trecenti
 </div>
 <div id="leg-rev" class="legendas">
 <div>
-<p><strong>Aula 22:</strong> o tempo de atendimento tinha média de 60 s. Com 90 chamadas, <span class="math inline">\(\bar X \approx N(60;\ 6{,}32^2)\)</span>.</p>
+<p><strong>Experimento dos resistores (aula 23):</strong> a especificação é <span class="math inline">\(\mu = 1000\ \Omega\)</span>, com <span class="math inline">\(\sigma = 35\ \Omega\)</span> conhecido. Com <span class="math inline">\(n = 15\)</span> resistores, <span class="math inline">\(\bar X \sim N(1000;\ 9{,}04^2)\)</span>.</p>
 </div>
 <div>
-<p>Se a média continua 60, só <strong>1%</strong> das amostras de 90 têm média abaixo de <strong>45,3 s</strong>.</p>
+<p>Se a média é mesmo 1000, só <strong>5%</strong> das amostras de 15 têm média acima de <strong>1014,9 Ω</strong>.</p>
 </div>
 <div>
-<p>A amostra treinada teve <span class="math inline">\(\bar x = 40\)</span> s, <strong>abaixo do corte</strong>. Ou tivemos muito azar, ou a média não é mais 60.</p>
+<p>A nossa amostra deu <span class="math inline">\(\bar x \approx 1025\ \Omega\)</span>, <strong>acima do corte</strong>. Ou tivemos muito azar, ou a média não é 1000.</p>
 </div>
 <div>
-<p>Supor um valor para <span class="math inline">\(\mu\)</span> e ver se a amostra fica <strong>improvável</strong>: isso já era um <strong>teste de hipóteses</strong>. Hoje cada peça ganha nome.</p>
+<p>Supor <span class="math inline">\(\mu = 1000\)</span> contra <span class="math inline">\(\mu &gt; 1000\)</span> e ver se a amostra fica <strong>improvável</strong>: isso já era um <strong>teste de hipóteses</strong>, e rejeitamos <span class="math inline">\(\mu = 1000\)</span>. Hoje cada peça ganha nome.</p>
 </div>
 </div>
 </div>
@@ -1833,6 +1833,39 @@ sortear outras 100 turmas
 </div>
 </div>
 </section>
+<section class="slide level2 denso">
+<h2>Lembra da amostra da sala?</h2>
+<div class="colunas">
+<div>
+<div class="caixa">
+<p><span class="rotulo">O que fizemos nas aulas 21 e 22</span></p>
+<ul>
+<li><strong>A população:</strong> os <strong>61.550 apartamentos</strong> vendidos em São Paulo em 2025 (ITBI, a base do Projeto 2).</li>
+<li><strong>A variável:</strong> o <strong>VM2</strong>, valor do metro quadrado, em R$ por m².</li>
+<li><strong>A amostra:</strong> cada um digitou o login do Insper, e o site sorteou <strong>100 apartamentos</strong>, sempre os mesmos para o mesmo login.</li>
+<li><strong>Aula 21:</strong> cada um calculou o seu <span class="math inline">\(\bar x\)</span>. No painel, as médias da sala desenharam a distribuição de <span class="math inline">\(\bar X\)</span> (TLC).</li>
+<li><strong>Aula 22:</strong> cada um montou o seu <strong>intervalo de confiança</strong> para <span class="math inline">\(\mu\)</span>.</li>
+</ul>
+</div>
+</div>
+<div>
+<div class="caixa caso">
+<p><span class="rotulo">O problema de hoje</span></p>
+<p>Alguém afirma que o VM2 médio dos 61.550 apartamentos é <strong>maior que R$ 5.360 por m²</strong>. Teste essa afirmação com a sua amostra.</p>
+<ul>
+<li><span class="math inline">\(n = 100\)</span> apartamentos;</li>
+<li><span class="math inline">\(\sigma = 2.412\)</span>, suposto <strong>conhecido</strong>;</li>
+<li><span class="math inline">\(\alpha = 5\%\)</span>.</li>
+</ul>
+<p><strong>Antes de abrir o celular:</strong> quais são <span class="math inline">\(H_0\)</span> e <span class="math inline">\(H_1\)</span>? O teste é à direita, à esquerda ou bicaudal?</p>
+</div>
+<div class="caixa ideia fragment">
+<p><span class="rotulo">As hipóteses</span></p>
+<p><span class="math inline">\(H_0: \mu = 5.360\)</span> contra <span class="math inline">\(H_1: \mu &gt; 5.360\)</span>, um teste <strong>à direita</strong>: rejeita <span class="math inline">\(H_0\)</span> se <span class="math inline">\(\bar x &gt; \bar x_c\)</span>. O <span class="math inline">\(\bar x_c\)</span> você calcula no celular.</p>
+</div>
+</div>
+</div>
+</section>
 <section class="slide level2" data-background-color="var(--superficie)">
 <h2>O teste da sua amostra</h2>
 <div class="quiz">
@@ -2021,39 +2054,6 @@ bilateral
 <div class="caixa ideia fragment">
 <p><span class="rotulo">Resposta: B</span></p>
 <p><span class="math inline">\(0{,}03 &lt; 0{,}05\)</span>, então rejeita a 5%. Mas <span class="math inline">\(0{,}03 &gt; 0{,}01\)</span>: a 1%, a amostra não é desfavorável o bastante.</p>
-</div>
-</div>
-</div>
-</section>
-<section class="slide level2 secao">
-<h2>Hoje no notebook</h2>
-<div class="miudo">
-<p>Primeiro o exemplo das aulas remotas, depois a atividade. Individual, e depois em grupo.</p>
-</div>
-</section>
-<section class="slide level2 denso">
-<h2>Atividade: máquinas de cartão</h2>
-<div class="colunas">
-<div style="flex:1.2">
-<div class="caixa caso">
-<p><span class="rotulo">O problema do notebook Aula_Atividade</span></p>
-<p>Uma empresa fornece máquinas de cartão a estabelecimentos comerciais, e os donos reclamaram que o tempo de processamento das transações estava, em média, muito alto.</p>
-<p>A meta da empresa: reduzir o tempo <strong>médio</strong> de processamento para <strong>menos de 4 segundos</strong> até o fim do semestre (assuma <span class="math inline">\(\sigma = 1\)</span> segundo, conhecido). Depois de diversas modificações, foram medidos os tempos de uma amostra aleatória de transações, no arquivo <code>tempos.csv</code>.</p>
-<p><strong>A meta foi atingida?</strong></p>
-</div>
-</div>
-<div>
-<div class="caixa exercicio">
-<p><span class="rotulo">Exercícios</span></p>
-<ol type="1">
-<li>A média amostral <span class="math inline">\(\bar x\)</span> já basta para dizer que <span class="math inline">\(\mu &lt; 4\)</span>?</li>
-<li>O histograma dos tempos: qual a sua intuição?</li>
-<li>As hipóteses nula e alternativa.</li>
-<li>A distribuição de <span class="math inline">\(\bar X\)</span> sob <span class="math inline">\(H_0\)</span>.</li>
-<li>A região crítica com <span class="math inline">\(\alpha = 1\%\)</span>.</li>
-<li>A meta foi atingida?</li>
-<li>O valor-p, e a conclusão com ele.</li>
-</ol>
 </div>
 </div>
 </div>
@@ -3859,29 +3859,30 @@ border: 1px solid var(--superficie-borda); font-weight: 700; }
   function montarRev() {
     const caixa = $("#g-rev");
     if (!caixa) return;
-    const MU = 60, S = 60 / Math.sqrt(90), C = MU + qnorm(0.01) * S, x0 = 30, x1 = 85;
+    // experimento dos resistores (aula 23): μ = 1000 Ω, σ = 35 Ω, n = 15, x̄ ≈ 1025
+    const MU = 1000, S = 35 / Math.sqrt(15), C = MU + qnorm(0.95) * S, XO = 1025, x0 = 965, x1 = 1040;
     const W = 700, H = 360, base = 290;
     const svg = novoSvg(caixa, W, H);
     const sx = escala(x0, x1, 20, W - 20), f = (x) => dnorm(x, MU, S);
     const sy = escala(0, f(MU) * 1.2, base, 40);
-    texto(svg, 20, 24, "média de 90 chamadas, se μ = 60", { class: "anot forte" });
+    texto(svg, 20, 24, "média de 15 resistores, se μ = 1000", { class: "anot forte" });
     el("path", { d: caminhoCurva(f, x0, x1, sx, sy, base), class: "area-neutra" }, svg);
     el("line", { x1: sx(MU), x2: sx(MU), y1: 44, y2: base, class: "linha-mu" }, svg);
-    const tMu = texto(svg, sx(MU) + 10, 62, "μ = 60", { class: "anot forte" });
+    const tMu = texto(svg, sx(MU) - 10, 62, "μ = 1000", { "text-anchor": "end", class: "anot forte" });
     const gC = el("g", {}, svg);
-    el("path", { d: caminhoCurva(f, x0, C, sx, sy, base, 200), class: "cauda-m" }, gC);
+    el("path", { d: caminhoCurva(f, C, x1, sx, sy, base, 200), class: "cauda-m" }, gC);
     el("line", { x1: sx(C), x2: sx(C), y1: base - 200, y2: base, class: "guia-rc" }, gC);
-    texto(gC, sx(C) - 8, base - 188, "corte de 1%: 45,3", { "text-anchor": "end", class: "anot forte c-marca-svg" });
+    texto(gC, sx(C) + 8, base - 188, `corte de 5%: ${num(C, 1)}`, { class: "anot forte c-marca-svg" });
     const gD = el("g", {}, svg);
-    el("circle", { cx: sx(40), cy: base, r: 10, class: "ponto-obs" }, gD);
-    texto(gD, sx(40), base - 22, "x̄ = 40", { "text-anchor": "middle", class: "anot forte c-roxo-svg" });
+    el("circle", { cx: sx(XO), cy: base, r: 10, class: "ponto-obs" }, gD);
+    texto(gD, sx(XO), base - 22, "x̄ ≈ 1025", { "text-anchor": "middle", class: "anot forte c-roxo-svg" });
     const gN = el("g", {}, svg);
-    texto(gN, sx(C) - 8, base - 120, "região crítica", { "text-anchor": "end", class: "anot forte c-marca-svg grande-txt" });
-    texto(gN, sx(C) - 8, base - 96, "α = 1%", { "text-anchor": "end", class: "anot c-marca-svg" });
-    eixoX(svg, sx, x0, x1, base, 8, "segundos");
+    texto(gN, sx(C) + 8, base - 120, "região crítica", { class: "anot forte c-marca-svg grande-txt" });
+    texto(gN, sx(C) + 8, base - 96, "α = 5%", { class: "anot c-marca-svg" });
+    eixoX(svg, sx, x0, x1, base, 8, "ohms");
     cena(caixa, (k, anim) => {
       vis(gC, k >= 1, anim); cair(gD, k >= 2, anim); vis(gN, k >= 3, anim);
-      tMu.textContent = k >= 3 ? "H₀: μ = 60" : "μ = 60";
+      tMu.textContent = k >= 3 ? "H₀: μ = 1000" : "μ = 1000";
     });
   }
 
